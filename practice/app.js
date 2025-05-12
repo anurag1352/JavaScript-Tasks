@@ -96,3 +96,22 @@ smallestNumber(4,1,3);
 smallestNumber(4,4,3);
 smallestNumber(-4,4,3);
 smallestNumber(-4,4,0.3);
+smallestNumber(-3,3,4);
+
+function smallestNumber2(a,b,c) {
+    let smallNumber = a;
+    if(b < smallNumber){
+        smallNumber = b;
+    }
+    if(c < smallNumber){
+        smallNumber = c;
+    }
+    return smallNumber;
+}
+
+console.log("smallestOfThree2");
+smallestNumber2(5,8,9);
+smallestNumber2(4,1,3);
+smallestNumber2(4,4,3);
+smallestNumber2(-4,4,3);
+smallestNumber2(-4,4,0.3);
