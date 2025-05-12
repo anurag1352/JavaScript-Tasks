@@ -83,3 +83,32 @@ if(n1 >= n2 && n1 >= n3){
 
 //"Check if a character is a vowel or consonant.",
 //Sol.8
+let char = "a";
+if(char === "a" || char === "e" || char ==="i" || char ==="o" || char ==="u" || char === "A" || char === "E" || char ==="I" || char ==="O" || char ==="U"){
+    console.log(char + " : is a vowel");
+}else{
+    console.log(char + " : is a consonant");
+}
+
+//"Check if a year is a leap year."
+//Sol.9
+let year = 2036;
+if(year %4 === 0){
+    console.log("this is a leap year");
+}else{
+    console.log("this is not  leap year");
+}
+
+//"Create a simple login with username and password check."
+//Sol.10
+let userName = "anurag";
+let password = 123&123;
+
+let reEnterUserName = "anurag";
+let reEnterPassword = 123&123;
+
+if(userName === reEnterUserName && password === reEnterPassword){
+    console.log("Login Succesful!");
+}else{
+    console.log("userName & Password invalid");
+}
