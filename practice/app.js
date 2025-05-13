@@ -115,3 +115,63 @@ smallestNumber2(4,1,3);
 smallestNumber2(4,4,3);
 smallestNumber2(-4,4,3);
 smallestNumber2(-4,4,0.3);
+
+//Problem.6
+//sol.1
+let str = "anurag";
+let newStr = str.split('').reverse().join('');
+console.log(newStr);
+
+//sol.2
+function reverseString(str){
+    return str.split('').reverse().join('');
+}
+console.log(reverseString("software development"));
+
+//sol.3
+function reverse(str){
+
+    if(typeof str !== 'string'){
+        throw new Error("Only string are allow");
+    }
+    let reversed = '';
+    for(let i = str.length -1; i >= 0; i--){
+        reversed += str[i];
+    }
+    return reversed;
+}
+console.log(reverse("This is reverse"));
+
+//Problem.7
+//Sol.1
+function factorial(integer){
+
+    if( integer < 0){
+        throw new Error("Input number should be grater or equal to zero");
+    }
+    if(typeof integer ==  "string"){
+        throw new Error("string is not valid enter a integer");
+    }
+    let result = 1;
+    for(let i=1; i <= integer; i++){
+        result *= i;
+    }
+    return result;
+}
+console.log(factorial(5));
+console.log(factorial(0));
+// console.log(factorial(-10));
+//console.log(factorial("anurag"));
+
+//Sol.2 => recursion.
+function calculateFactorialUsingrecusrsion(integer){
+    if( integer < 0){
+        throw new Error("Input number should be grater or equal to zero");
+    }
+    if(integer === 0 || integer === 1){
+        return 1;
+    }
+return integer * calculateFactorialUsingrecusrsion(integer - 1);
+}
+console.log(calculateFactorialUsingrecusrsion(5));
+console.log(calculateFactorialUsingrecusrsion(0));
